@@ -1,0 +1,60 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Pretendard,sans-serif;word-break:keep-all;background:#14261E}
+.c{position:relative;overflow:hidden;width:1080px;height:1350px;background:#14261E;color:#F4EEDF;padding:96px 72px}
+.serif{font-family:'Noto Serif KR',serif;font-weight:900;letter-spacing:-.03em;line-height:1.28}
+.y{color:#F5C451}
+.k{font-size:24px;font-weight:700;letter-spacing:.2em;opacity:.8}
+.n{position:absolute;right:72px;top:92px;font-size:24px;font-weight:800;opacity:.5}
+.foot{position:absolute;left:72px;right:72px;bottom:56px;display:flex;justify-content:space-between;font-size:20px;opacity:.5}
+.b{padding:18px 24px;border-radius:24px;font-weight:600;line-height:1.4;font-size:26px}
+.me{align-self:flex-end;background:#F5C451;color:#1D2A22;border-bottom-right-radius:8px}
+.ai{align-self:flex-start;background:#F4EEDF;color:#1D2A22;border-bottom-left-radius:8px}
+.ai i{font-style:normal;display:inline-block;background:#1F5C45;color:#fff;font-size:17px;font-weight:800;padding:3px 10px;border-radius:99px;margin-right:10px;vertical-align:middle}
+.pair{display:flex;flex-direction:column;gap:10px}
+.tag{font-size:20px;font-weight:800;color:#F5C451;letter-spacing:.1em;margin-bottom:2px}
+.cardx{background:#F4EEDF;color:#1D2A22;border-radius:28px;padding:44px 38px}
+.cardx .num{font-family:'Noto Serif KR',serif;font-weight:900;font-size:44px;color:#1F5C45;line-height:1}
+.cardx h3{font-size:38px;font-weight:900;margin:14px 0 10px;letter-spacing:-.02em}
+.cardx p{font-size:25px;line-height:1.5;color:#3E4A42;font-weight:500}
+.line{border-top:1.5px solid rgba(244,238,223,.25)}
+</style></head><body><script>
+const v=new URLSearchParams(location.search).get('v');
+const F=`<div class="foot"><span>목회자 AI 자비스비서 활용 및 운용 사역 세미나</span><span>3.29–31 · 제주</span></div>`;
+let h='';
+if(v==='2')h=`<div class="c"><div class="k">왜 지금, AI 비서인가</div><div class="n">02</div>
+<div class="serif" style="font-size:62px;margin:22px 0 40px">이런 부탁,<br><span class="y">비서에게 맡겨 보세요.</span></div>
+<div style="display:flex;flex-direction:column;gap:26px">
+${[['행정','다음 주 운영위원회 회의록 틀 잡아 줘','지난 회의 안건까지 넣어 두었어요.'],['심방','다음 심방 가정의 지난 기록 알려 줘','지난번 나눈 기도 제목 세 가지예요.'],['교육','새가족반 2주차 교안 초안 부탁해','우리 교회 눈높이로 만들었어요.'],['소통·행사','부활절 준비할 일 점검표로 정리해 줘','안내문 초안도 함께 드릴게요.']].map(r=>`<div class="pair"><div class="tag">${r[0]}</div><div class="b me">${r[1]}</div><div class="b ai"><i>자비스</i>${r[2]}</div></div>`).join('')}</div>${F}</div>`;
+if(v==='3')h=`<div class="c"><div class="k">듣고 적는 세미나가 아닙니다</div><div class="n">03</div>
+<div class="serif" style="font-size:62px;margin:22px 0 22px">사흘 뒤,<br><span class="y">손에 쥐고 가는 네 가지</span></div>
+<div style="font-size:26px;opacity:.75;margin-bottom:40px">내 노트북으로, 우리 교회 자료로, 그 자리에서 만들고 바로 확인합니다.</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;grid-auto-rows:340px">
+${[['내 교회 자비스','우리 교회와 내 목회를 아는 비서. 세미나가 끝나도 그대로 이어 씁니다.'],['열린 교회 홈페이지','도메인 구입부터 서버 연결까지. 주소를 치면 열립니다.'],['직접 만든 교회 쇼츠','교회 소식·행사 안내 영상 한 편과, 혼자 만드는 순서.'],['내 교회 적용 계획','돌아가서 첫 한 달, 무엇부터 맡길지 적은 한 장.']].map((b,i)=>`<div class="cardx"><div class="num">0${i+1}</div><h3>${b[0]}</h3><p>${b[1]}</p></div>`).join('')}</div>${F}</div>`;
+if(v==='4')h=`<div class="c"><div class="k">사흘의 흐름 · 실습 19시간</div><div class="n">04</div>
+<div class="serif" style="font-size:62px;margin:22px 0 48px">만들면,<br><span class="y">바로 눈에 보이는 순서</span></div>
+<div style="position:relative;padding-left:56px">
+<div style="position:absolute;left:14px;top:14px;bottom:30px;border-left:3px dashed rgba(245,196,81,.5)"></div>
+${[['1일차 · 3.29 월','첫 비서와 목회 문서','자비스 설치 · 첫 대화 · 주보·공문·회의록 · 심방 기록·교안 · 저녁엔 홈페이지 뼈대'],['2일차 · 3.30 화','홈페이지를 열고, 쇼츠를 시작','글·사진·로고 채우기 · 도메인 구입 · 서버 연결 · 쇼츠 대본·목소리·화면·자막'],['3일차 · 3.31 수','완성하고, 계획하고, 나누기','쇼츠 완성·함께 보기 · 반복되는 일 맡기기 · 내 교회 적용 계획 발표 · 파송 예배']].map(d=>`<div style="position:relative;margin-bottom:64px"><div style="position:absolute;left:-56px;top:4px;width:31px;height:31px;border-radius:50%;background:#F5C451;border:6px solid #14261E;box-shadow:0 0 0 2px #F5C451"></div>
+<div class="tag" style="font-size:22px">${d[0]}</div><div style="font-size:44px;font-weight:900;margin:10px 0 12px;letter-spacing:-.02em">${d[1]}</div><div style="font-size:27px;line-height:1.6;opacity:.8">${d[2]}</div></div>`).join('')}</div>
+<div class="pair" style="margin:-10px 0 34px"><div class="b me">돌아가서 혼자서도 할 수 있을까요?</div><div class="b ai"><i>자비스</i>그럼요. 세미나가 끝나도 제가 곁에 있을게요.</div></div><div style="font-size:21px;opacity:.55">매일 아침 말씀·기도로 시작합니다 · 시각은 현장 사정에 따라 달라질 수 있습니다</div>${F}</div>`;
+if(v==='5')h=`<div class="c"><div class="k">세미나 안내</div><div class="n">05</div>
+<div class="serif" style="font-size:62px;margin:22px 0 50px">함께 가실<br><span class="y">서른 분을 기다립니다</span></div>
+<div class="line">${[['일정','3월 29일(월) ~ 31일(수) · 2박 3일'],['장소','제주'],['비용','50만원 · 숙식 및 클로드 요금 포함'],['정원','선착순 30명'],['강사','문재진 · 이창근 · 최윤식 · 최현식 · 현영광']].map(r=>`<div style="display:flex;gap:30px;padding:30px 0;border-bottom:1.5px solid rgba(244,238,223,.25)"><div style="width:110px;flex:none;color:#F5C451;font-weight:800;font-size:24px;padding-top:4px">${r[0]}</div><div style="font-size:32px;font-weight:800;letter-spacing:-.01em">${r[1]}</div></div>`).join('')}</div>
+<div class="cardx" style="margin-top:40px;padding:30px 36px"><div style="font-size:22px;font-weight:900;color:#1F5C45;margin-bottom:12px">준비물</div>
+<div style="font-size:24px;line-height:1.65;font-weight:600">노트북(맥·윈도) · 충전기 · 휴대폰(본인 확인용)<br>교회 로고 · 교회 사진 몇 장 · 교회 소개 글<br>원하는 홈페이지 주소 후보 두세 가지</div></div>${F}</div>`;
+if(v==='6')h=`<div class="c" style="padding:0">
+<div style="position:absolute;inset:0;background:url(jeju6.jpg) center/cover"></div>
+<div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,38,30,.55) 0%,rgba(20,38,30,.75) 50%,#14261E 92%)"></div>
+<div style="position:absolute;left:72px;right:72px;top:110px"><div class="k">미리 궁금하실 것들</div>
+<div class="serif" style="font-size:66px;margin-top:24px">AI는 목회자를<br><span class="y">대신하지 않습니다.</span></div>
+<div style="font-size:28px;line-height:1.6;margin-top:22px;opacity:.9">성도를 만나는 사람도, 결정하는 사람도 목회자입니다.<br>비서는 그 자리에 더 오래 머물도록 돕습니다.</div></div>
+<div style="position:absolute;left:72px;right:72px;top:640px;display:flex;flex-direction:column;gap:18px">
+${[['컴퓨터에 익숙하지 않은데요?','설치부터 한 걸음씩 함께 하는 실습형입니다.'],['성도 개인 정보는요?','실제 민감한 정보는 넣지 않고, 맡길 것과 맡기지 않을 것의 기준을 함께 세웁니다.'],['돌아가서 혼자 쓸 수 있나요?','내 노트북·내 교회 자료로 실습해 그대로 이어 씁니다.']].map(q=>`<div style="background:rgba(244,238,223,.1);border:1.5px solid rgba(244,238,223,.3);border-radius:22px;padding:24px 30px"><div style="font-size:28px;font-weight:900"><span class="y">Q.</span> ${q[0]}</div><div style="font-size:23px;opacity:.8;margin-top:8px;line-height:1.5">${q[1]}</div></div>`).join('')}</div>
+<div style="position:absolute;right:24px;bottom:16px;font-size:15px;opacity:.45">사진: Hallasan, Public domain (Wikimedia Commons)</div>
+<div class="foot" style="bottom:56px"><span>목회자 AI 자비스비서 활용 및 운용 사역 세미나</span><span>3.29–31 · 제주</span></div></div>`;
+document.body.innerHTML=h;
+</script></body></html>

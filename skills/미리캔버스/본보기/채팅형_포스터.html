@@ -1,0 +1,67 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Pretendard,sans-serif;word-break:keep-all;background:#14261E}
+.c{position:relative;overflow:hidden;background:#14261E;color:#F4EEDF}
+.ph{position:absolute;left:0;right:0;top:0;background-size:cover;background-position:center 40%}
+.ph::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,38,30,.15) 0%,rgba(20,38,30,.35) 45%,#14261E 100%)}
+.serif{font-family:'Noto Serif KR',serif;font-weight:900;letter-spacing:-.03em;line-height:1.25}
+.y{color:#F5C451}
+.chat{display:flex;flex-direction:column;gap:18px}
+.b{max-width:78%;padding:20px 26px;border-radius:28px;font-weight:600;line-height:1.4;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.me{align-self:flex-end;background:#F5C451;color:#1D2A22;border-bottom-right-radius:8px}
+.ai{align-self:flex-start;background:#F4EEDF;color:#1D2A22;border-bottom-left-radius:8px}
+.ai i{font-style:normal;display:inline-block;background:#1F5C45;color:#fff;font-size:.62em;font-weight:800;padding:3px 10px;border-radius:99px;margin-right:10px;vertical-align:middle}
+.lab{font-size:.6em;font-weight:700;opacity:.55;margin-bottom:6px;display:block}
+.info{display:grid;grid-template-columns:repeat(4,auto);justify-content:space-between;border-top:1.5px solid rgba(244,238,223,.3);border-bottom:1.5px solid rgba(244,238,223,.3)}
+.info div small{display:block;color:#F5C451;font-weight:800;opacity:.9}
+.info div strong{font-weight:800}
+.cr{position:absolute;font-size:15px;opacity:.45}
+</style></head><body><script>
+const v=new URLSearchParams(location.search).get('v')||'feed';
+const B=(s)=>`<div class="chat" style="font-size:${30*s}px">
+<div class="b me">이번 주 주보 초안 좀 만들어 줘</div>
+<div class="b ai"><i>자비스</i>초안 준비했어요. 광고 순서만 확인해 주세요.</div>
+<div class="b me">지난달 심방 기록에서 기도 제목도 모아 줘</div>
+<div class="b ai"><i>자비스</i>12가정 기도 제목, 정리해 두었습니다 🙏</div></div>`;
+const INFO=(s)=>`<div class="info" style="padding:${22*s}px 0;font-size:${30*s}px"><div><small style="font-size:${19*s}px">일정</small><strong>3.29–31</strong></div><div><small style="font-size:${19*s}px">장소</small><strong>제주</strong></div><div><small style="font-size:${19*s}px">비용</small><strong>50만원</strong></div><div><small style="font-size:${19*s}px">정원</small><strong>선착순 30</strong></div></div>`;
+const CR='사진: M Min, CC BY 3.0 (Wikimedia Commons)';
+let h='';
+if(v==='feed')h=`<div class="c" style="width:1080px;height:1350px">
+<div class="ph" style="height:760px;background-image:url(jeju2.jpg)"></div>
+<div style="position:absolute;left:72px;right:72px;top:80px">
+<div style="font-size:24px;font-weight:700;letter-spacing:.2em;opacity:.85">2박 3일 · 목회자 실습 세미나 · 제주</div>
+<div class="serif" style="font-size:72px;margin-top:22px">목회의 일손은 AI 비서에게,<br><span class="y">목회자는 말씀과 사람에게.</span></div></div>
+<div style="position:absolute;left:72px;right:72px;top:470px">${B(1)}</div>
+<div style="position:absolute;left:72px;right:72px;top:1000px">
+<div style="font-size:40px;font-weight:900;letter-spacing:-.02em">목회자 AI 자비스비서 활용 및 운용 사역 세미나</div>
+<div style="font-size:25px;opacity:.75;margin:12px 0 26px">자비스 · 교회 홈페이지(도메인·서버까지) · 교회 쇼츠 — 사흘 동안 직접 만들어 갑니다</div>
+${INFO(1)}
+<div style="font-size:22px;opacity:.7;margin-top:22px">강사 문재진 · 이창근 · 최윤식 · 최현식 · 현영광 &nbsp;|&nbsp; 숙식·클로드 요금 포함</div></div>
+<div class="cr" style="right:24px;bottom:16px">${CR}</div></div>`;
+if(v==='story')h=`<div class="c" style="width:1080px;height:1920px">
+<div class="ph" style="height:1100px;background-image:url(jeju2.jpg)"></div>
+<div style="position:absolute;left:72px;right:72px;top:250px">
+<div style="font-size:26px;font-weight:700;letter-spacing:.2em;opacity:.85">2박 3일 · 목회자 실습 세미나 · 제주</div>
+<div class="serif" style="font-size:84px;margin-top:24px">목회의 일손은<br>AI 비서에게,<br><span class="y">목회자는<br>말씀과 사람에게.</span></div></div>
+<div style="position:absolute;left:72px;right:72px;top:860px">${B(1.08)}</div>
+<div style="position:absolute;left:72px;right:72px;top:1440px">
+<div style="font-size:42px;font-weight:900;letter-spacing:-.02em;line-height:1.3">목회자 AI 자비스비서<br>활용 및 운용 사역 세미나</div>
+<div style="font-size:27px;opacity:.75;margin:14px 0 30px">사흘 뒤, 내 교회의 비서와 함께 돌아갑니다</div>
+${INFO(1.05)}
+<div style="font-size:23px;opacity:.7;margin-top:22px">강사 문재진 · 이창근 · 최윤식 · 최현식 · 현영광<br>숙식·클로드 요금 포함</div></div>
+<div class="cr" style="right:24px;bottom:16px">${CR}</div></div>`;
+if(v==='fb')h=`<div class="c" style="width:1200px;height:630px">
+<div class="ph" style="width:520px;right:auto;height:630px;background-image:url(jeju2.jpg)"></div>
+<div style="position:absolute;left:40px;top:60px;width:470px">${B(.72)}</div>
+<div style="position:absolute;left:580px;right:56px;top:60px">
+<div style="font-size:18px;font-weight:700;letter-spacing:.18em;opacity:.8">2박 3일 · 목회자 실습 세미나 · 제주</div>
+<div class="serif" style="font-size:42px;margin:16px 0 18px">목회의 일손은 AI 비서에게,<br><span class="y">목회자는 말씀과 사람에게.</span></div>
+<div style="font-size:26px;font-weight:900">목회자 AI 자비스비서 활용 및 운용 사역 세미나</div>
+<div style="margin-top:22px">${INFO(.8)}</div>
+<div style="font-size:16px;opacity:.7;margin-top:16px">강사 문재진 · 이창근 · 최윤식 · 최현식 · 현영광 · 숙식·클로드 요금 포함</div></div>
+<div class="cr" style="left:14px;bottom:10px;font-size:12px">${CR}</div></div>`;
+document.body.innerHTML=h;
+</script></body></html>
